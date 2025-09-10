@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sunkissed Style</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Sunkissed Style ☀️</h1>
+    <p class="tagline">Cool Colors. Hot Deals. Summer Vibes Only!</p>
+  </header>
+
+  <main>
+    <!-- T-Shirts -->
+    <section>
+      <h2>👕 T-Shirts – 20% Off</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="images/tshirt1.jpg" alt="Mint Tee" />
+          <h3>Mint Breeze Tee</h3>
+          <p class="price" onclick="changeColor(this)">$16.00</p>
+        </div>
+        <div class="product-card">
+          <img src="images/tshirt2.jpg" alt="Lavender Tee" />
+          <h3>Lavender Glow Tee</h3>
+          <p class="price" onclick="changeColor(this)">$16.00</p>
+        </div>
+        <div class="product-card">
+          <img src="images/tshirt3.jpg" alt="Peach Tee" />
+          <h3>Peachy Cool Tee</h3>
+          <p class="price" onclick="changeColor(this)">$16.00</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Long Skirts -->
+    <section>
+      <h2>👗 Long Skirts – 20% Off</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="images/longskirt1.jpg" alt="Sky Skirt" />
+          <h3>Skyline Skirt</h3>
+          <p class="price" onclick="changeColor(this)">$24.00</p>
+        </div>
+        <div class="product-card">
+          <img src="images/longskirt2.jpg" alt="Sea Skirt" />
+          <h3>Sea Breeze Skirt</h3>
+          <p class="price" onclick="changeColor(this)">$24.00</p>
+        </div>
+        <div class="product-card">
+          <img src="images/longskirt3.jpg" alt="Coral Skirt" />
+          <h3>Coral Drift Skirt</h3>
+          <p class="price" onclick="changeColor(this)">$24.00</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Long Dresses -->
+    <section>
+      <h2>🌼 Long Dresses – 15% Off</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="images/longdress1.jpg" alt="Ocean Dress" />
+          <h3>Ocean Dream Dress</h3>
+          <p class="price" onclick="changeColor(this)">$42.50</p>
+        </div>
+        <div class="product-card">
+          <img src="images/longdress2.jpg" alt="Blush Dress" />
+          <h3>Blush Bloom Dress</h3>
+          <p class="price" onclick="changeColor(this)">$42.50</p>
+        </div>
+        <div class="product-card">
+          <img src="images/longdress3.jpg" alt="Lavender Dress" />
+          <h3>Lavender Drift Dress</h3>
+          <p class="price" onclick="changeColor(this)">$42.50</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Short Skirts -->
+    <section>
+      <h2>🩳 Short Skirts – New Arrivals</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="images/shortskirt1.jpg" alt="Mint Skirt" />
+          <h3>Mint Mini Skirt</h3>
+          <p class="price" onclick="changeColor(this)">$22.00</p>
+        </div>
+        <div class="product-card">
+          <img src="images/shortskirt2.jpg" alt="Sun Skirt" />
+          <h3>Sunbeam Skirt</h3>
+          <p class="price" onclick="changeColor(this)">$22.00</p>
+        </div>
+        <div class="product-card">
+          <img src="images/shortskirt3.jpg" alt="Blush Skirt" />
+          <h3>Blush Mini Skirt</h3>
+          <p class="price" onclick="changeColor(this)">$22.00</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Sunkissed Style. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function changeColor(element) {
+      element.style.color = '#8B4513'; // brown
+    }
+  </script>
+</body>
+</html>
+/* Base Styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #fef9ef, #dbe9f4);
+  color: #333;
+}
+
+header {
+  background: linear-gradient(135deg, #ffd6d6, #ffe8cc);
+  text-align: center;
+  padding: 50px 20px;
+}
+
+header h1 {
+  font-size: 3em;
+  margin: 0;
+  color: #e76f51;
+}
+
+.tagline {
+  font-size: 1.2em;
+  color: #5e5e5e;
+  margin-top: 10px;
+}
+
+main section {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+section h2 {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #264653;
+}
+
+/* Product Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* Product Card */
+.product-card {
+  background: #ffffffcc;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.product-card:hover {
+  transform: scale(1.03);
+}
+
+.product-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.product-card h3 {
+  font-size: 1.1em;
+  margin: 10px 0 5px;
+  color: #333;
+}
+
+.price {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: white;
+  background: #e76f51;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 0 0 12px 12px;
+  transition: color 0.3s ease;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #ffd6d6;
+  font-size: 0.9em;
+  color: #555;
+}
